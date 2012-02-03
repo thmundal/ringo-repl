@@ -6,7 +6,7 @@ var repl = {
   cb: function(cmd) {
     console.log(JSON.stringify(eval(cmd)));
   },
-  start:function(module, cb) {
+  start:function(cb) {
     this.running = true;
     this.w.postMessage("repl");
 
