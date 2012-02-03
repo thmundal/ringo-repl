@@ -1,0 +1,24 @@
+An interactive REPL for interacting with your running script.
+
+Usage:
+
+var {repl} = require("./repl");
+repl.start(function(cmd) {
+             console.log(JSON.stringify(eval(cmd)));
+           });
+
+This REPL is nice to use together with emacs.
+
+To set up ringo with the repl in emacs:
+
+Add this to your .emacs file
+
+(defun ringo-start (file)
+  (interactive "f")
+  (cua-mode)
+  (setq explicit-shell-file-name "/path/to/ringo")
+  (setq explicit-ringo-args (list file))
+  (shell)
+  )
+
+Emacs will prompt for a file, enter the path of your app file containing the repl code, and you should have a buffer in emacs displaying your interative REPL :)
