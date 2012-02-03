@@ -1,5 +1,5 @@
 {
-    "name": "SHELL Repl",
+    "name": "Ringo Repl",
     "version": "0.0.1",
     "description": "An interactive repl running in a seperate worker.",
     "maintainers": [
