@@ -1,0 +1,25 @@
+{
+    "name": "SHELL Repl",
+    "version": "0.0.1",
+    "description": "An interactive repl running in a seperate worker.",
+    "maintainers": [
+        {
+            "name": "Thomas Mundal",
+            "email": "thmundal@gmail.com",
+            "web": "http://www.mundalsoftware.net"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/thmundal/ringo-repl.git"
+        }
+    ],
+    "dependencies": {},
+    "main": "repl.js"
+}
