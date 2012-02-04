@@ -24,10 +24,9 @@ var repl = {
       } catch (x) {
         console.error(x);
       }
-
+    }
       if(this.running)
         this.w.postMessage("repl");
-    }
   },
   w:new Worker({onmessage:function(e) {
                   if(e.data == "repl")
