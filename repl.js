@@ -1,5 +1,6 @@
 var shell = require("ringo/shell");
 var {Worker} = require("ringo/worker");
+var system = require("system");
 
 var repl = {
   running:false,
@@ -23,14 +24,15 @@ var repl = {
       } catch (x) {
         console.error(x);
       }
+
+      if(this.running)
+        this.w.postMessage("repl");
     }
-    if(this.running)
-      this.w.postMessage("repl");
   },
   w:new Worker({onmessage:function(e) {
-                      if(e.data == "repl")
-                        repl.run();
-                    }            
+                  if(e.data == "repl")
+                    repl.run();
+                }            
                })
 };
 
